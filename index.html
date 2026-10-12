@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Anniversary, Mumma & Papa ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;500;700&family=Noto+Sans+Gujarati:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Reusable heart shape -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb3c9"/><stop offset="1" stop-color="#ff3d77"/></linearGradient></defs>
+<symbol id="h" viewBox="0 0 24 24"><path fill="url(#hg)" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2 0 3.7 1.1 5.7 3.2C14 6.1 15.700 5 17.700 5 21 5 23.100 8.400 21.600 11.800 19.500 16.400 12 21 12 21z"/></symbol></svg>
+
+<div id="fx" aria-hidden="true"></div>
+<button id="music" class="music" aria-label="Toggle background music" title="Music">🎵</button>
+<audio id="audio" src="music/anniversary.mp3" loop preload="none"></audio>
+
+<!-- PAGE 1: WELCOME -->
+<main id="welcome" class="page active">
+  <svg class="heart" aria-hidden="true"><use href="#h"/></svg>
+  <p class="eyebrow">A surprise made with love</p>
+  <h1 class="title">Happy Anniversary, Mumma &amp; Papa! ❤️</h1>
+  <p class="sub">Two hearts, one beautiful journey, and a lifetime of love.</p>
+  <p class="soft">Your love, your care and your togetherness make our family beautiful. Every happy day in our home started with the two of you. Thank you for everything.</p>
+  <button class="btn primary" id="open">Open Your Surprise 💝</button>
+
+  <section class="qbox card" aria-label="Fun question">
+    <p class="q-en">Okay Mumma &amp; Papa, one important question... 😜❤️ Are you both ready to see your beautiful love story?</p>
+    <p class="q-gu" lang="gu">સારું મમ્મી અને પપ્પા, એક મહત્વનો સવાલ છે... 😜❤️ શું તમે બંને તમારી સુંદર પ્રેમકથા જોવા માટે તૈયાર છો?</p>
+    <div class="arena" id="arena">
+      <button class="btn yes" id="yes">YES, SHOW ME! ❤️</button>
+      <button class="btn no" id="no" type="button">NO 🙈</button>
+      <span class="bubble" id="bubble" aria-live="polite"></span>
+    </div>
+  </section>
+</main>
+
+<!-- PAGE 2: INTRO -->
+<main id="intro" class="page">
+  <svg class="heart" aria-hidden="true"><use href="#h"/></svg>
+  <p class="eyebrow">Chapter one</p>
+  <h1 class="title">Let's See the Journey of Your Beautiful Love Story... ❤️</h1>
+  <p class="sub">Every picture holds a memory, every memory holds a smile, and every smile tells a story of love.</p>
+  <p class="soft">From the first memories to all the beautiful moments you have shared, every chapter of your journey is special.</p>
+  <button class="btn primary" id="begin">Let's Begin Our Journey 💖</button>
+</main>
+
+<!-- PAGE 3: PHOTO JOURNEY (one photo at a time) -->
+<main id="journey" class="page wide">
+  <div class="top"><span id="progress" class="progress" aria-live="polite"></span><div class="bar"><i id="bar"></i></div></div>
+  <div class="stage">
+    <div class="frame" id="frame">
+      <img id="photo" alt="">
+      <p class="missing" id="missing" hidden>Photo not found. Please check the file name in the images folder. 💕</p>
+    </div>
+    <section class="card mtext">
+      <h2 class="mtitle" id="mtitle"></h2>
+      <p class="quote" id="quote"></p>
+      <p class="note" id="note"></p>
+      <nav class="nav" aria-label="Memory navigation">
+        <button class="btn ghost" id="prev">← Previous Memory</button>
+        <button class="btn primary" id="next">Next Memory →</button>
+      </nav>
+    </section>
+  </div>
+</main>
+
+<!-- PAGE 4: FINAL -->
+<main id="final" class="page">
+  <svg class="heart big" aria-hidden="true"><use href="#h"/></svg>
+  <h1 class="title">And Their Beautiful Story Continues... ❤️</h1>
+  <article class="letter card">
+    <p><b>Dear Mumma &amp; Papa,</b></p>
+    <p>Your love is not just your story. It is also the reason our family is so beautiful.</p>
+    <p>Thank you for filling our lives with love, care, laughter, and countless beautiful memories.</p>
+    <p>I may not say it every day, but I feel so lucky to be your daughter.</p>
+    <p>May you always hold each other's hands, laugh together, fight over little things, and love each other more with every passing year.</p>
+    <p>May your smiles never fade and may your journey together always be filled with happiness.</p>
+    <p>Happy Anniversary to my favourite couple in the whole world!</p>
+    <p>I love you both more than words can say. ❤️</p>
+  </article>
+  <h2 class="end">Happy Anniversary, Mumma &amp; Papa! 💖</h2>
+  <p class="sign">With all my love, your daughter. ❤️</p>
+  <div class="hearts-row" aria-hidden="true"><svg class="heart sm"><use href="#h"/></svg><svg class="heart"><use href="#h"/></svg><svg class="heart sm"><use href="#h"/></svg></div>
+  <div class="nav">
+    <button class="btn primary" id="replay">Replay Our Beautiful Memories 🔄</button>
+    <button class="btn ghost" id="home">Back to the Beginning 🏡</button>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
